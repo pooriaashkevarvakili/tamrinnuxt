@@ -1,17 +1,44 @@
 <template>
   <div>
-    <Header/>
+    <TheHeader @sidenavToggle="updateSidenavToggle(!displaySidenav)" />
+    <TheSidenav
+      :show="displaySidenav"
+      @close="updateSidenavToggle(false)"
+    />
     <nuxt/>
   </div>
 </template>
 
 <script>
-import Header from "~/components/Header"
+import TheHeader from '@/components/Navigation/TheHeader';
+import TheSidenav from '@/components/Navigation/TheSidenav';
+
 export default {
-  name: 'DefaultLayout',
-  components:{
-    Header
-  }
-  
-}
+  components: {
+    TheHeader,
+    TheSidenav,
+  },
+  data() {
+    return {
+      displaySidenav: false,
+    };
+  },
+  methods: {
+    updateSidenavToggle(shouldDisplaySidenav) {
+      this.displaySidenav = shouldDisplaySidenav;
+    },
+  },
+};
 </script>
+
+
+<style>
+html {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+</style>
