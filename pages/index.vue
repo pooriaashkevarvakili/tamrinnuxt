@@ -11,8 +11,34 @@
 import PostList from '@/components/Posts/PostList';
 
 export default {
+  middleware:'log',
   components: {
     PostList,
+  },
+  data() {
+    return{
+loadedPost:[
+   {
+            author: 'Metal Gogo',
+            id: '1',
+            title: 'My awesome post',
+            previewText: 'Super amazing content',
+            thumbnail: 'http://placekitten.com/600/800',
+          },
+          {
+            author: 'Metal Gogo',
+            id: '2',
+            title: 'My awesome post 2',
+            previewText: 'Super amazing content',
+            thumbnail: 'http://placekitten.com/800/600',
+          },
+]
+    }
+  },
+  created(){
+setTimeout(() => {
+
+})
   },
   asyncData(context, callback) {
     setTimeout(() => {

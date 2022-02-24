@@ -32,6 +32,9 @@ export default {
       });
     }, 1000);
   },
+  head:{
+    title:'a blog post'
+  }
 };
 </script>
 

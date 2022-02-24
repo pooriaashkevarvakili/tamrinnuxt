@@ -1,4 +1,5 @@
 <template>
+
   <form @submit.prevent="onSave">
     <AppControlInput v-model="postInformation.author">
       Author Name

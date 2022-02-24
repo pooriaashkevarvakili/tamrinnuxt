@@ -1,4 +1,5 @@
 <template>
+
   <div class="admin-auth-page">
     <div class="auth-container">
       <form>

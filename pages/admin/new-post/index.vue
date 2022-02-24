@@ -1,4 +1,5 @@
 <template>
+
   <div class="admin-new-post-page">
     <section class="new-post-form">
       <AdminPostForm />
@@ -14,6 +15,16 @@ export default {
   components: {
     AdminPostForm,
   },
+ data() {
+   return{
+     editedPost:{
+       author:'',
+       title:'',
+       thumbnailLink:'',content:''
+     }
+   }
+ },
+
 };
 </script>
 
